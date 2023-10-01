@@ -27,5 +27,8 @@
     "@originjs/vite-plugin-federation": "^1.3.2",
     "kill-port": "^2.0.1",
     "vite-plugin-css-injected-by-js": "^2.2.0"
+  },
+  "dependencies": {
+    "mermaid": "^10.4.0"
   }
 }

@@ -16,7 +16,15 @@ Aplicación desarrollada con MFE que muestre el detalle de una reserva, consta l
 
 ## 🚀 Architecture
 
-Se utiliza arquitectura
+```mermaid
+graph TB
+
+    subgraph Packages
+        REMOTE:RoomsApp--->sq{HOST: MainApp}
+        REMOTE:GuestApp--->sq{HOST: MainApp}
+    end
+
+```
 
 ## 👔 How to use
 
