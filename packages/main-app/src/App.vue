@@ -1,30 +1,56 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import BaseHeader from './components/layouts/BaseHeader.vue'
+import RoomDetail from 'rooms_app/RoomDetail'
+
+const reservation = {
+  reservationId: '12345',
+  rooms: [
+    { roomId: '1', guestsId: ['1', '2', '3'] },
+    { roomId: '2', guestsId: ['4', '5', '6'] }
+  ]
+}
+
+const { reservationId } = reservation
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <el-config-provider namespace="ep">
+    <BaseHeader />
+    <div class="flex main-container">
+      <div w="full" p="16">
+        <!--  Reservation -->
+        <el-row :gutter="20">
+          <el-col :span="6"> My Reservation # {{ reservationId }} </el-col>
+        </el-row>
+        <el-row>
+          <el-col>
+            <RoomDetail :reservationId="reservationId" />
+          </el-col>
+        </el-row>
+      </div>
+    </div>
+  </el-config-provider>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#app {
+  text-align: center;
+  color: var(--ep-text-color-primary);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.main-container {
+  height: calc(100vh - var(--ep-menu-item-height) - 3px);
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.el-row {
+  margin-bottom: 20px;
+}
+.el-row:last-child {
+  margin-bottom: 0;
+}
+.el-col {
+  border-radius: 4px;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
 }
 </style>

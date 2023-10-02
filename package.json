@@ -14,9 +14,9 @@
     "build": "pnpm --parallel --filter \"./**\" build ",
     "serve": "pnpm --parallel --filter \"./**\" serve ",
     "restart": "pnpm stop & pnpm build & pnpm serve",
-    "build:remotes": "pnpm --parallel --filter \"./team-blue\" --filter \"./team-green\"  build",
-    "serve:remotes": "pnpm --parallel --filter \"./team-blue\" --filter \"./team-green\"  serve",
-    "dev:hosts": "pnpm --filter \"./team-red\" dev",
+    "build:remotes": "pnpm --parallel --filter \"./rooms-app\" --filter \"./guests-app\"  build",
+    "serve:remotes": "pnpm --parallel --filter \"./rooms-app\" --filter \"./guests-app\"  serve",
+    "dev:hosts": "pnpm --filter \"./main-app\" dev",
     "stop": "kill-port --port 5000,5001,5002",
     "clean": "pnpm run clean"
   },
