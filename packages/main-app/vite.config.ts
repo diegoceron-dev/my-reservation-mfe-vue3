@@ -35,8 +35,8 @@ export default defineConfig({
     federation({
       name: 'main-app',
       remotes: {
-        rooms_app: 'http://localhost:5001/dist/assets/remoteEntry.js',
-        guests_app: 'http://localhost:5002/dist/assets/remoteEntry.js'
+        rooms_app: 'http://localhost:5001/assets/remoteEntry.js',
+        guests_app: 'http://localhost:5002/assets/remoteEntry.js'
       },
       shared: ['vue']
     }),
