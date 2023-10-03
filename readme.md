@@ -11,7 +11,7 @@ Aplicación desarrollada con MFE que muestre el detalle de una reserva, consta l
 - Vite
 - OriginJs Vite Module Federation
 - Vue 3
-- Pinia Class
+- Pinia Class (To do)
 - Element Plus
 
 ## 🚀 Architecture
@@ -30,6 +30,7 @@ graph TB
 
     pnpm install
     pnpm build
+    pnpm serve
 
 ## Guide Line
 
