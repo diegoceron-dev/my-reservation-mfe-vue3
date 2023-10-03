@@ -7,7 +7,7 @@
   ],
   "engines": {
     "node": "^14.18.0 || >=16.0.0",
-    "pnpm": ">=8.0.1"
+    "pnpm": ">=7.26.3"
   },
   "scripts": {
     "start": "pnpm start",
