@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue'
 import federation from '@originjs/vite-plugin-federation'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 import {
